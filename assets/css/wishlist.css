@@ -1,0 +1,52 @@
+
+body { font-family: 'Hind Siliguri', Arial, sans-serif; }
+.wishlist-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+}
+.wishlist-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.wishlist-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+.wishlist-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Shows when image is missing */
+}
+
+.remove-btn {
+    color: red;
+    cursor: pointer;
+}
+.empty-wishlist {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+}
+.btn-order {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: green;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-order.disabled {
+    background-color: gray;
+    pointer-events: none;
+}

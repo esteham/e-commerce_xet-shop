@@ -1,0 +1,147 @@
+:root {
+  --primary: #4361ee;
+  --primary-light: #e0e7ff;
+  --secondary: #3f37c9;
+  --success: #4cc9f0;
+  --light: #f8f9fa;
+  --dark: #1e1e1e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7ff;
+  color: var(--dark);
+}
+
+.confirmation-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+.confirmation-card:hover {
+  transform: translateY(-5px);
+}
+
+.confirmation-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.order-details {
+  background: var(--primary-light);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.order-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.confirmation-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.whats-next {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.step-number {
+  background: var(--primary);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.step-content h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .confirmation-icon {
+    font-size: 4rem;
+  }
+
+  .btn-primary,
+  .btn-success {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

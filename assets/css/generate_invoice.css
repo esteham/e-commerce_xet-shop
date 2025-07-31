@@ -1,0 +1,240 @@
+
+:root {
+    --primary: #4361ee;
+    --primary-light: #e0e7ff;
+    --secondary: #3f37c9;
+    --dark: #1e1e1e;
+    --light: #f8f9fa;
+    --success: #4cc9f0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7ff;
+    color: var(--dark);
+}
+
+.invoice-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.invoice-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.invoice-header:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: white;
+    border-radius: 0 0 16px 16px;
+}
+
+.invoice-title {
+    font-size: 2rem;
+    font-weight: 650;
+    margin-bottom: 0;
+}
+
+.invoice-number {
+    font-size: .8rem;
+    font-weight: 550;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.invoice-body {
+    padding: 30px;
+}
+
+.invoice-section {
+    margin-bottom:20px;
+}
+
+.section-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.customer-info p {
+    margin-bottom: 5px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-block;
+    width: 120px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead th {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+}
+
+.table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+.total-row {
+    background: var(--primary-light);
+    font-weight: 600;
+}
+
+.total-row td {
+    padding: 15px;
+    border-top: 2px solid var(--primary);
+    border-bottom: none !important;
+}
+
+.thank-you {
+    background: var(--primary-light);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-print {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-print:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.btn-back {
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+@media print {
+    body {
+        background: white;
+        font-size: 12pt;
+    }
+    
+    .invoice-container {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .invoice-header {
+        padding: 20px;
+    }
+    
+    .invoice-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .invoice-title {
+        font-size: 1.8rem;
+    }
+    
+    .invoice-body {
+        padding: 20px;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        padding: 8px;
+    }
+    
+    .table tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: var(--primary);
+        margin-right: 15px;
+    }
+}
+@media print {
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}

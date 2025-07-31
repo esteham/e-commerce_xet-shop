@@ -1,0 +1,56 @@
+:root {
+  --primary-color: #4e73df;
+  --secondary-color: #f8f9fc;
+  --dark-color: #5a5c69;
+}
+
+body {
+  background-color: #f8f9fc;
+  font-family: "Nunito", sans-serif;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
+  min-height: 100vh;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff;
+}
+
+.sidebar .nav-link.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  border: none;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 700;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.badge-primary {
+  background-color: var(--primary-color);
+}
+
+.message-preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
