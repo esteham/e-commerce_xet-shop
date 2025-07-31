@@ -66,14 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'deepseekspider@gmail.com';       // email address
-                $mail->Password = 'rjva iybi zhra jodd';          // app password
+                $mail->Username = '';  // email address
+                $mail->Password = '';  // app password
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
                 // Sender and recipient
                 $mail->setFrom($email, $name);
-                $mail->addAddress('deepseekspider@gmail.com');  // email to receive the contact form submissions
+                $mail->addAddress('');  // email to receive the contact form submissions
 
                 // Email content
                 $mail->isHTML(false);

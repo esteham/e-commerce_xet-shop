@@ -191,12 +191,12 @@ class USER
 		$mail->SMTPDebug = 0; // use 2 for debug
 		$mail->Host = 'smtp.gmail.com';
 		$mail->SMTPAuth = true;
-		$mail->Username = 'deepseekspider@gmail.com';
-		$mail->Password = 'rjva iybi zhra jodd'; // App password
+		$mail->Username = ''; //email
+		$mail->Password = ''; // App password
 		$mail->SMTPSecure = 'tls';
 		$mail->Port = 587;
 
-		$mail->setFrom('deepseekspider@gmail.com', 'SpiDer Monkey');
+		$mail->setFrom('', 'Xet_shop');
 		$mail->addAddress($email);
 		$mail->isHTML(true);
 		$mail->CharSet = 'UTF-8';
